@@ -1,0 +1,9 @@
+[submodule "Codebase/Dependencies/HL-Setup"]
+	path = Codebase/Dependencies/HL-Setup
+	url = https://github.com/StevenNaliwajka/HL-Setup
+[submodule "Codebase/Dependencies/HL-Update"]
+	path = Codebase/Dependencies/HL-Update
+	url = https://github.com/StevenNaliwajka/HL-Update
+[submodule "Codebase/Dependencies/HL-Run"]
+	path = Codebase/Dependencies/HL-Run
+	url = https://github.com/StevenNaliwajka/HL-Run
