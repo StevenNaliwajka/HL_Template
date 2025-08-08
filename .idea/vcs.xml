@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Codebase/Dependencies/HL-Run" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Codebase/Dependencies/HL-Setup" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Codebase/Dependencies/HL-Update" vcs="Git" />
   </component>
 </project>

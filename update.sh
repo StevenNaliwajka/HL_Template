@@ -3,14 +3,17 @@ set -euo pipefail
 
 # Resolve paths
 ROOT_DIR="$( cd -- "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd )"
-HL_UPDATE="$ROOT_DIR/Codebase/Dependencies/HL-Update/update.sh"
+HL_SETUP="$ROOT_DIR/Codebase/Dependencies/HL-Setup/setup.sh"
 
-# Check if the dependency exists
-if [[ ! -x "$HL_UPDATE" ]]; then
-    echo "[ERROR] HL-Update script not found or not executable:"
-    echo "  $HL_UPDATE"
+# Check if HL-Setup exists and is executable
+if [[ ! -x "$HL_SETUP" ]]; then
+    echo "[ERROR] HL-Setup script not found or not executable:"
+    echo "  $HL_SETUP"
     exit 1
 fi
 
-# Forward all arguments to HL-Update's update.sh
-exec "$HL_UPDATE" "$@"
+# Export an environment variable so HL-Setup knows this is an update
+export HL_MODE="update"
+
+# Forward all arguments (if any) to HL-Setup
+exec "$HL_SETUP" "$@"
